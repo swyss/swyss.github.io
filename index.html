@@ -1,65 +1,130 @@
 <!DOCTYPE html>
 <html lang="de">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Dein Seitentitel</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+        integrity="sha384-k6v/0iZ8Dq6vJX+c4Dq8i0KPY+Vj9KeVy1z8z0UIdzMGj7s8K5hO2Y7T0t5AXZ0N" crossorigin="anonymous">
+
+    <title>Dein Professionelles Portfolio</title>
     <style>
-        /* Grundlegendes Dark-Mode-Styling */
+        @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+
         body {
             margin: 0;
-            font-family: Arial, sans-serif;
-            background-color: #121212; /* Dunkler Hintergrund */
-            color: #E0E0E0; /* Heller Text */
+            font-family: 'Roboto', sans-serif;
+            background-color: #121212;
+            color: #E0E0E0;
+            scroll-behavior: smooth;
         }
 
-        header, footer {
+        header {
+            position: sticky;
+            top: 0;
             background-color: #333;
             color: #FFF;
             padding: 20px;
             text-align: center;
+            z-index: 1000;
         }
 
         .avatar {
+            border-radius: 50%;
+            max-width: 100px;
             display: block;
-            margin: 0 auto 20px; /* Zentriert das Bild mit einem Abstand nach unten */
-            border-radius: 50%; /* Macht das Bild rund */
-            max-width: 100px; /* Maximale Breite des Avatars */
+            margin: 0 auto 20px;
         }
 
         nav ul {
             list-style: none;
             padding: 0;
+            display: flex;
+            justify-content: center;
         }
 
         nav ul li {
-            display: inline;
-            margin-right: 20px;
+            margin: 0 20px;
         }
 
         nav ul li a {
             color: #FFF;
             text-decoration: none;
+            transition: color 0.3s;
+        }
+
+        nav ul li a:hover {
+            color: #00E676;
         }
 
         section {
             padding: 20px;
         }
 
-        h1, h2 {
-            color: #00E676; /* Grüne Akzentfarbe */
+        h1,
+        h2 {
+            color: #00E676;
+        }
+
+        .card {
+            background-color: #333;
+            color: #FFF;
+            margin: 20px 0;
+            padding: 20px;
+            border-radius: 10px;
+            transition: transform 0.3s;
+        }
+
+        .card:hover {
+            transform: translateY(-5px);
+        }
+
+        .card img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 10px;
+        }
+
+        .card-content {
+            margin-top: 20px;
+        }
+
+        .github-link {
+            display: flex;
+            align-items: center;
+            /* Zentriert das Icon vertikal zum Text */
+            text-decoration: none;
+            /* Entfernt die Unterstreichung des Links */
+            color: #E0E0E0;
+            /* Farbe des Link-Texts */
+        }
+
+        .github-icon {
+            width: 50px;
+
+            margin-right: 20px;
+            /* Abstand zwischen Icon und Text */
+        }
+
+        footer {
+            background-color: #333;
+            color: #FFF;
+            text-align: center;
+            padding: 20px;
         }
     </style>
 </head>
+
 <body>
     <header>
-        <img src="pfad_zu_deinem_avatar.jpg" alt="Avatar" class="avatar">
-        <h1>Willkommen auf meiner GitHub-Seite!</h1>
+        <img src="Assets/avataaars.png" alt="Avatar" class="avatar">
+        <h1>Hello There</h1>
         <nav>
             <ul>
-                <li><a href="#about">Über mich</a></li>
-                <li><a href="#projects">Projekte</a></li>
-                <li><a href="#contact">Kontakt</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#skills">Skills</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#contact">Contact</a></li>
             </ul>
         </nav>
     </header>
@@ -67,22 +132,46 @@
     <main>
         <section id="about">
             <h2>Über mich</h2>
-            <p>-></p>
+            <p>Welcome to my digital realm!</p> 
+            <p>I'm swyss, a passionate coder and creative problem solver dedicated to turning complex challenges into elegant solutions. With a keen eye for detail and an insatiable curiosity for the latest technologies, I craft unique digital experiences that resonate. Dive into my world of coding adventures, where innovation meets artistry, and discover the projects that fuel my passion for programming. Let's embark on this journey together, exploring the boundless possibilities of code!</p>
         </section>
-        
+
+        <section id="skills">
+            <h2>Fähigkeiten</h2>
+            <div class="card">
+                <img src="Assets/skill_image.png" alt="Skill">
+                <div class="card-content">
+                    <h3>Skill #1</h3>
+                    <p></p>
+                </div>
+            </div>
+            <!-- Weitere Karten für andere Fähigkeiten hinzufügen -->
+        </section>
+
         <section id="projects">
             <h2>Projekte</h2>
-            <p>-></p>
+            <div class="card">
+                <img src="Assets/project_image.png" alt="Projekt">
+                <div class="card-content">
+                    <h3>Projekt #1</h3>
+                    <p></p>
+                </div>
+            </div>
+            <!-- Weitere Karten für andere Projekte hinzufügen -->
         </section>
-        
+
         <section id="contact">
             <h2>Kontakt</h2>
-            <p>-></p>
+            <a href="https://github.com/swysss" class="github-link">
+                <img src="Assets/github_icon.png" alt="GitHub" class="github-icon">
+                GitHub
+            </a>
         </section>
     </main>
 
     <footer>
-        <p>© 2024 swyss. Alle Rechte vorbehalten.</p>
+        <p>© 2024 Ihr Name. Alle Rechte vorbehalten.</p>
     </footer>
 </body>
+
 </html>
