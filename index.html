@@ -66,13 +66,25 @@
             color: #00E676;
         }
 
+        .card-grid {
+            display: flex;
+            flex-wrap: wrap;
+            /* Erlaubt den Karten, in die nächste Zeile zu springen, wenn der Platz nicht ausreicht */
+            justify-content: space-around;
+            /* Verteilt den verfügbaren Platz gleichmäßig um die Karten */
+            gap: 10px;
+            /* Fügt Abstand zwischen den Karten hinzu */
+        }
+
         .card {
             background-color: #333;
+            max-width: 350px;
             color: #FFF;
             margin: 20px 0;
             padding: 20px;
             border-radius: 10px;
             transition: transform 0.3s;
+            box-shadow: 0 4px 8px 0 rgba(139, 236, 155, 0.2);
         }
 
         .card:hover {
@@ -132,32 +144,87 @@
     <main>
         <section id="about">
             <h2>About</h2>
-            <p>Welcome to my digital realm!</p> 
-            <p>I'm swyss, a passionate coder and creative problem solver dedicated to turning complex challenges into elegant solutions. With a keen eye for detail and an insatiable curiosity for the latest technologies, I craft unique digital experiences that resonate. Dive into my world of coding adventures, where innovation meets artistry, and discover the projects that fuel my passion for programming. Let's embark on this journey together, exploring the boundless possibilities of code!</p>
+            <p>Welcome to my digital realm!</p>
+            <p>I'm swyss, a passionate coder and creative problem solver dedicated to turning complex challenges into
+                elegant solutions. With a keen eye for detail and an insatiable curiosity for the latest technologies, I
+                craft unique digital experiences that resonate. Dive into my world of coding adventures, where
+                innovation meets artistry, and discover the projects that fuel my passion for programming. Let's embark
+                on this journey together, exploring the boundless possibilities of code!</p>
         </section>
 
         <section id="skills">
             <h2>Skills</h2>
-            <div class="card">
-                <img src="Assets/skill_image.png" alt="Skill">
-                <div class="card-content">
-                    <h3>Skill #1</h3>
-                    <p></p>
+            <div class="card-grid">
+                <div class="card">
+                    <img src="Assets/skill_swe.png" alt="Skill">
+                    <div class="card-content">
+                        <h3>Software-Engineering</h3>
+                        <p>Software Engineering is not just about writing code; it's an art and science of solving
+                            real-world problems through designing, developing, and maintaining software applications.
+                            It's about understanding user needs, crafting efficient algorithms, and building scalable
+                            systems that stand the test of time. As a software engineer, I thrive on creating elegant
+                            solutions that improve people's lives, leveraging a blend of technical proficiency, creative
+                            thinking, and a deep understanding of software architecture and design patterns. My journey
+                            in software engineering is driven by a passion for innovation and a commitment to
+                            excellence, ensuring that every line of code not only meets requirements but exceeds
+                            expectations.</p>
+                    </div>
+                </div>
+                <div class="card">
+                    <img src="Assets/skil_devops.png" alt="Skill">
+                    <div class="card-content">
+                        <h3>DevOps</h3>
+                        <p>In the ever-evolving landscape of technology, DevOps stands at the crossroads of software
+                            development and operations, embodying a culture of collaboration and a set of practices that
+                            aim to shorten the development lifecycle while delivering features, fixes, and updates
+                            frequently in close alignment with business objectives. My foray into DevOps has equipped me
+                            with an arsenal of skills from automating and optimizing infrastructure, implementing
+                            continuous integration and delivery pipelines, to monitoring and ensuring the reliability
+                            and stability of systems in production. This holistic approach not only enhances efficiency
+                            and performance but also fosters a resilient and adaptive IT ecosystem, ready to meet the
+                            dynamic demands of the modern digital world.</p>
+                    </div>
                 </div>
             </div>
-            <!-- Weitere Karten für andere Fähigkeiten hinzufügen -->
         </section>
 
         <section id="projects">
             <h2>Projects</h2>
-            <div class="card">
-                <img src="Assets/project_image.png" alt="Projekt">
-                <div class="card-content">
-                    <h3>Projekt #1</h3>
-                    <p></p>
+            <div class="card-grid">
+                <div class="card">
+                    <img src="Assets/_.png" alt="Logo">
+                    <div class="card-content">
+                        <h3>NovaGate</h3>
+                        <p>A Password-Manager App</p>
+                        <a href="https://github.com/swyss/NovaGate" class="github-link">
+                            <img src="Assets/github_icon.png" alt="GitHub" class="github-icon">
+                            GitHub Repo
+                        </a>
+                    </div>
+                </div>
+                <div class="card">
+                    <img src="Assets/sonicflow_logo.png" alt="Logo">
+                    <div class="card-content">
+                        <h3>SonicFlow</h3>
+                        <p>A Music-App</p>
+                        <a href="https://github.com/swyss/SonicFlow" class="github-link">
+                            <img src="Assets/github_icon.png" alt="GitHub" class="github-icon">
+                            GitHub Repo
+                        </a>
+                    </div>
+                </div>
+                <div class="card">
+                    <img src="Assets/FusionBazaar_logo.png" alt="Logo">
+                    <div class="card-content">
+                        <h3>FusionBazaar</h3>
+                        <p>WebShop</p>
+                        <a href="https://github.com/swyss/FusionBazaar" class="github-link">
+                            <img src="Assets/github_icon.png" alt="GitHub" class="github-icon">
+                            GitHub Repo
+                        </a>
+                    </div>
                 </div>
             </div>
-            <!-- Weitere Karten für andere Projekte hinzufügen -->
         </section>
 
         <section id="contact">
