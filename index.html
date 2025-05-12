@@ -2,12 +2,13 @@
 <html lang="de">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
-        integrity="sha384-k6v/0iZ8Dq6vJX+c4Dq8i0KPY+Vj9KeVy1z8z0UIdzMGj7s8K5hO2Y7T0t5AXZ0N" crossorigin="anonymous">
-
-    <title>Dein Professionelles Portfolio</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Simon Wyss | Portfolio</title>
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+        integrity="sha384-k6v/0iZ8Dq6vJX+c4Dq8i0KPY+Vj9KeVy1z8z0UIdzMGj7s8K5hO2Y7T0t5AXZ0N"
+        crossorigin="anonymous" />
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
 
@@ -16,236 +17,194 @@
             font-family: 'Roboto', sans-serif;
             background-color: #121212;
             color: #E0E0E0;
+            line-height: 1.6;
             scroll-behavior: smooth;
         }
 
         header {
+            background: linear-gradient(90deg, #00E676, #00BFA5);
+            text-align: center;
+            padding: 40px 20px;
             position: sticky;
             top: 0;
-            background-color: #333;
-            color: #FFF;
-            padding: 20px;
-            text-align: center;
             z-index: 1000;
+            color: white;
         }
 
         .avatar {
             border-radius: 50%;
-            max-width: 400px;
-            display: block;
-            margin: 0 auto 20px;
+            width: 140px;
+            border: 3px solid white;
         }
 
         nav ul {
             list-style: none;
-            padding: 0;
             display: flex;
+            flex-wrap: wrap;
             justify-content: center;
+            padding: 0;
+            margin-top: 20px;
+            gap: 20px;
         }
 
-        nav ul li {
-            margin: 0 20px;
-        }
-
-        nav ul li a {
-            color: #FFF;
+        nav a {
+            color: white;
             text-decoration: none;
-            transition: color 0.3s;
+            font-weight: bold;
+            transition: opacity 0.3s ease;
         }
 
-        nav ul li a:hover {
-            color: #00E676;
+        nav a:hover {
+            opacity: 0.8;
+        }
+
+        main {
+            max-width: 1100px;
+            margin: auto;
+            padding: 40px 20px;
         }
 
         section {
-            padding: 20px;
+            margin-bottom: 60px;
         }
 
-        h1,
         h2 {
             color: #00E676;
+            margin-bottom: 20px;
+            border-bottom: 2px solid #00E676;
+            display: inline-block;
         }
 
         .card-grid {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 10px;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 20px;
         }
 
         .card {
-            background-color: #333;
-            max-width: 350px;
-            color: #FFF;
-            margin: 20px 0;
+            background-color: #1E1E2F;
+            border-radius: 12px;
             padding: 20px;
-            border-radius: 10px;
-            transition: transform 0.3s;
-            box-shadow: 0 4px 8px 0 rgba(139, 236, 155, 0.2);
+            box-shadow: 0 6px 15px rgba(0, 230, 118, 0.1);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
         }
 
         .card:hover {
             transform: translateY(-5px);
+            box-shadow: 0 8px 20px rgba(0, 230, 118, 0.25);
         }
 
         .card img {
-            max-width: 100%;
-            height: auto;
-            border-radius: 10px;
+            width: 100%;
+            border-radius: 8px;
+            margin-bottom: 15px;
         }
 
-        .card-content {
-            margin-top: 20px;
+        .card-content h3 {
+            margin: 10px 0;
+            color: #00E676;
         }
 
         .github-link {
-            display: flex;
+            display: inline-flex;
             align-items: center;
-            /* Zentriert das Icon vertikal zum Text */
+            gap: 10px;
+            color: #00E676;
             text-decoration: none;
-            /* Entfernt die Unterstreichung des Links */
-            color: #E0E0E0;
-            /* Farbe des Link-Texts */
+            font-weight: bold;
+            margin-top: 15px;
         }
 
-        .github-icon {
-            width: 50px;
-
-            margin-right: 20px;
-            /* Abstand zwischen Icon und Text */
+        .github-link img {
+            width: 24px;
+            height: 24px;
         }
 
         footer {
-            background-color: #333;
-            color: #FFF;
+            background-color: #1A1A1A;
             text-align: center;
-            padding: 20px;
+            padding: 30px 0;
+            font-size: 0.9rem;
+            color: #888;
+            border-top: 1px solid #333;
+        }
+
+        @media (max-width: 768px) {
+            nav ul {
+                flex-direction: column;
+            }
+
+            .github-icon {
+                width: 24px;
+            }
         }
     </style>
 </head>
 
 <body>
+
     <header>
-        <img src="Assets/avataaars.png" alt="Avatar" class="avatar" width="250">
+        <img src="Assets/avataaars.png" alt="Avatar" class="avatar" />
         <h1>Hello There 🖖</h1>
         <nav>
             <ul>
-                <li> <a href="https://github.com/swyss" class="github-link">
-                        <img src="Assets/github_icon.png" alt="GitHub" class="github-icon">
-                        GitHub/swyss
-                    </a></li>
-                <!-- <li> <a href="https://github.com/swyss" class="github-link">
-                        <img src="Assets/linked_icon.png" alt="GitHub" class="github-icon">
-                        LinkedIn
-                    </a></li> -->
+                <li><a href="https://github.com/swyss">GitHub/swyss</a></li>
+                <!-- Weitere Links bei Bedarf einfügen -->
             </ul>
-            <!-- <h1>And with my Alter Ego.. UllerDev</h1>
-            <ul>
-                <li> <a href="https://github.com/uller-dev" class="github-link">
-                        <img src="Assets/github_icon.png" alt="GitHub" class="github-icon">
-                        GitHub/uller
-                    </a></li>
-                    <li> <a href="https://github.com/uller-dev" class="github-link">
-                        <img src="Assets/github_icon.png" alt="Instagram" class="instagram-icon">
-                        Instagram
-                    </a></li>
-                    <li> <a href="https://github.com/uller-dev" class="github-link">
-                        <img src="Assets/X_icon.png" alt="X" class="github-icon">
-                        X/uller
-                    </a></li>
-            </ul> -->
-
         </nav>
     </header>
 
     <main>
         <section id="about">
             <h2>About</h2>
-            <p>Welcome to my digital realm!</p>
-            <p>While my heart beats for coding, my professional roots are deeply embedded in the realm of automation
-                engineering. As an Electrical Engineer specializing in process automation, I navigate the intricate
-                dance of machines and systems, blending the rigors of engineering with the fluidity of software
-                development. This unique intersection of disciplines allows me to envision and forge solutions that are
-                not only technologically advanced but also pragmatic and sustainable in the industrial landscape.</p>
+            <p>Welcome to my digital realm! I’m Simon – an Electrical Engineer specialized in automation, with a deep
+                passion for software development.</p>
+            <p>My work bridges the gap between industrial control systems and modern software. From PLCs to full-stack
+                web apps, I thrive in turning technical complexity into reliable, user-centric solutions.</p>
         </section>
 
         <section id="stats">
-            <h2>Stats</h2>
-            <a href="http://www.github.com/swyss"><img
-                    src="https://github-readme-stats.vercel.app/api?username=swyss&show_icons=true&hide=&count_private=true&title_color=0891b2&text_color=ffffff&icon_color=0891b2&bg_color=1c1917&hide_border=true&show_icons=true"
-                    alt="swyss's GitHub stats" /></a>
-
-            <a href="http://www.github.com/swyss"><img
-                    src="https://github-readme-streak-stats.herokuapp.com/?user=swyss&stroke=ffffff&background=1c1917&ring=0891b2&fire=0891b2&currStreakNum=ffffff&currStreakLabel=0891b2&sideNums=ffffff&sideLabels=ffffff&dates=ffffff&hide_border=true" /></a>
-
-            <a href="https://github.com/swyss" align="left"><img
-                    src="https://github-readme-stats.vercel.app/api/top-langs/?username=swyss&langs_count=10&title_color=0891b2&text_color=ffffff&icon_color=0891b2&bg_color=1c1917&hide_border=true&locale=en&custom_title=Top%20%Languages"
-                    alt="Top Languages" /></a>
+            <h2>GitHub Stats</h2>
+            <div class="card-grid">
+                <img src="https://github-readme-stats.vercel.app/api?username=swyss&show_icons=true&theme=dark"
+                    alt="GitHub Stats" />
+                <img src="https://github-readme-streak-stats.herokuapp.com/?user=swyss&theme=dark"
+                    alt="GitHub Streak" />
+                <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=swyss&theme=dark&layout=compact"
+                    alt="Top Languages" />
+            </div>
         </section>
 
         <section id="skills">
             <h2>Skills</h2>
             <div class="card-grid">
                 <div class="card">
-                    <img src="Assets/skill_swe.png" alt="Skill">
+                    <img src="Assets/skill_swe.png" alt="Software Engineering">
                     <div class="card-content">
-                        <h3>Software-Engineering</h3>
-                        <p>Software Engineering is not just about writing code; it's an art and science of solving
-                            real-world problems through designing, developing, and maintaining software applications.
-                            It's about understanding user needs, crafting efficient algorithms, and building scalable
-                            systems that stand the test of time. As a software engineer, I thrive on creating elegant
-                            solutions that improve people's lives, leveraging a blend of technical proficiency, creative
-                            thinking, and a deep understanding of software architecture and design patterns. My journey
-                            in software engineering is driven by a passion for innovation and a commitment to
-                            excellence, ensuring that every line of code not only meets requirements but exceeds
-                            expectations.</p>
+                        <h3>Software Engineering</h3>
+                        <p>Designing and developing scalable, maintainable systems using clean code and robust
+                            architectures.</p>
                     </div>
                 </div>
                 <div class="card">
-                    <img src="Assets/skil_devops.png" alt="Skill">
+                    <img src="Assets/skil_devops.png" alt="DevOps">
                     <div class="card-content">
                         <h3>DevOps</h3>
-                        <p>In the ever-evolving landscape of technology, DevOps stands at the crossroads of software
-                            development and operations, embodying a culture of collaboration and a set of practices that
-                            aim to shorten the development lifecycle while delivering features, fixes, and updates
-                            frequently in close alignment with business objectives. My foray into DevOps has equipped me
-                            with an arsenal of skills from automating and optimizing infrastructure, implementing
-                            continuous integration and delivery pipelines, to monitoring and ensuring the reliability
-                            and stability of systems in production. This holistic approach not only enhances efficiency
-                            and performance but also fosters a resilient and adaptive IT ecosystem, ready to meet the
-                            dynamic demands of the modern digital world.</p>
+                        <p>Automated pipelines, CI/CD, monitoring, and efficient cloud-native deployments.</p>
                     </div>
                 </div>
                 <div class="card">
-                    <img src="Assets/skil_electro.png" alt="Skill">
+                    <img src="Assets/skil_electro.png" alt="Electrical Engineering">
                     <div class="card-content">
                         <h3>Electrical Engineering</h3>
-                        <p>At the heart of every innovation in the tech world, electrical engineering plays a pivotal
-                            role, blending theory with practical application to breathe life into ideas. My journey in
-                            electrical engineering has honed my ability to design and dimension circuits with precision,
-                            ensuring efficiency and reliability in both power distribution and signal processing.
-                            Delving into the realm of hardware programming, I've crafted software that seamlessly
-                            integrates with intricate hardware components, unlocking new levels of functionality and
-                            performance. My work with microprocessors, from architecture to programming, has equipped me
-                            with a deep understanding of embedded systems, enabling me to develop solutions that are not
-                            only innovative but also robust and scalable. This fusion of electrical engineering skills
-                            empowers me to transform conceptual designs into tangible technologies that solve real-world
-                            challenges.</p>
+                        <p>From schematic design to embedded systems – blending electronics with smart code.</p>
                     </div>
                 </div>
                 <div class="card">
-                    <img src="Assets/skil_plc.png" alt="Skill">
+                    <img src="Assets/skil_plc.png" alt="Automation">
                     <div class="card-content">
-                        <h3>Automation</h3>
-                        <p>In the intricate dance of machines and systems, automation stands as the choreographer,
-                            orchestrating movements with precision and efficiency. My expertise in automation is rooted
-                            in a profound understanding of Programmable Logic Controllers (PLCs), where I've mastered
-                            the art of programming these pivotal components to dictate seamless operations. From
-                            conceptualizing control concepts that ensure optimal performance and reliability, to
-                            rigorously testing and fine-tuning systems, my approach is meticulous and holistic. The
-                            culmination of this process is the successful commissioning of systems, where theory meets
-                            practice, and designs come to life, functioning flawlessly in their intended environments.
-                            This journey through the nuances of automation not only fuels my passion for engineering but
-                            also reinforces my commitment to advancing industrial efficiency and productivity.</p>
+                        <h3>Industrial Automation</h3>
+                        <p>Expert in PLCs, control concepts, HMI, and commissioning industrial systems.</p>
                     </div>
                 </div>
             </div>
@@ -254,128 +213,19 @@
         <section id="tools">
             <h2>Technologies & Tools</h2>
             <div class="card-grid">
+                <!-- Beispiel-Card -->
                 <div class="card">
-                    <img src="Assets/Avalonia_Logo.png" alt="tools" width="200">
-                    <div class="card-content">
-                        <h3>Avalonia</h3>
-                        <p></p>
-                        <a href="https://avaloniaui.net/" class="github-link">
-                            <img src="Assets/link_icon.png" alt="Link" class="github-icon">
-                        </a>
-                    </div>
-                </div>
-                <div class="card">
-                    <img src="Assets/ASP_Logo.png" alt="tools" width="200">
-                    <div class="card-content">
-                        <h3>ASP.NET</h3>
-                        <p></p>
-                        <a href="https://dotnet.microsoft.com/en-us/apps/aspnet" class="github-link">
-                            <img src="Assets/link_icon.png" alt="Link" class="github-icon">
-                        </a>
-                    </div>
-                </div>
-                <div class="card">
-                    <img src="Assets/Vue_Logo.png" alt="tools" width="200">
+                    <img src="Assets/Vue_Logo.png" alt="Vue.js" />
                     <div class="card-content">
                         <h3>Vue.js</h3>
-                        <p></p>
                         <a href="https://vuejs.org/" class="github-link">
-                            <img src="Assets/link_icon.png" alt="Link" class="github-icon">
+                            <img src="Assets/link_icon.png" alt="Link" />
+                            Website
                         </a>
                     </div>
                 </div>
-                <div class="card">
-                    <img src="Assets/quasar_Logo.png" alt="tools" width="200">
-                    <div class="card-content">
-                        <h3>QUASAR</h3>
-                        <p></p>
-                        <a href="https://quasar.dev/" class="github-link">
-                            <img src="Assets/link_icon.png" alt="Link" class="github-icon">
-                        </a>
-                    </div>
-                </div>
-                <div class="card">
-                    <img src="Assets/spring_Logo.png" alt="tools" width="200">
-                    <div class="card-content">
-                        <h3>spring-boot</h3>
-                        <p></p>
-                        <a href="https://spring.io/projects/spring-boot" class="github-link">
-                            <img src="Assets/link_icon.png" alt="Link" class="github-icon">
-                        </a>
-                    </div>
-                </div>
-                <div class="card">
-                    <img src="Assets/mongo_Logo.png" alt="tools" width="200">
-                    <div class="card-content">
-                        <h3>MongoDB</h3>
-                        <p></p>
-                        <a href="https://www.mongodb.com/de-de" class="github-link">
-                            <img src="Assets/link_icon.png" alt="Link" class="github-icon">
-                        </a>
-                    </div>
-                </div>
-                <div class="card">
-                    <img src="Assets/postgres_Logo.png" alt="tools" width="200">
-                    <div class="card-content">
-                        <h3>PostgreSQL</h3>
-                        <p></p>
-                        <a href="https://www.postgresql.org/" class="github-link">
-                            <img src="Assets/link_icon.png" alt="Link" class="github-icon">
-                        </a>
-                    </div>
-                </div>
-                <div class="card">
-                    <img src="Assets/jetbrains_Logo.png" alt="tools" width="200">
-                    <div class="card-content">
-                        <h3>jetbrains IDE's</h3>
-                        <p></p>
-                        <a href="https://www.jetbrains.com/" class="github-link">
-                            <img src="Assets/link_icon.png" alt="Link" class="github-icon">
-                        </a>
-                    </div>
-                </div>
-                <div class="card">
-                    <img src="Assets/tia_Logo.png" alt="tools" width="200">
-                    <div class="card-content">
-                        <h3>Siemens TIA Portal</h3>
-                        <p></p>
-                        <a href="https://www.siemens.com/de/de/produkte/automatisierung/industrie-software/automatisierungs-software/tia-portal.html"
-                            class="github-link">
-                            <img src="Assets/link_icon.png" alt="Link" class="github-icon">
-                        </a>
-                    </div>
-                </div>
-                <div class="card">
-                    <img src="Assets/pcs7_Logo.png" alt="tools" width="200">
-                    <div class="card-content">
-                        <h3>Simatic PCS7</h3>
-                        <p></p>
-                        <a href="https://www.siemens.com/de/de/produkte/automatisierung/prozessleittechnik/simatic-pcs-7.html?gclid=Cj0KCQjwwMqvBhCtARIsAIXsZpYlDIbqI305np0dt0HTxsLJO7126mCdvVXUs-MPojUJ3xhan3HKO3AaAtIQEALw_wcB&acz=1&gad_source=1"
-                            class="github-link">
-                            <img src="Assets/link_icon.png" alt="Link" class="github-icon">
-                        </a>
-                    </div>
-                </div>
-                <div class="card">
-                    <img src="Assets/RaspberryPi_Logo.png" alt="tools" width="200">
-                    <div class="card-content">
-                        <h3>Raspberry Pi</h3>
-                        <p></p>
-                        <a href="https://www.raspberrypi.com/" class="github-link">
-                            <img src="Assets/link_icon.png" alt="Link" class="github-icon">
-                        </a>
-                    </div>
-                </div>
-                <div class="card">
-                    <img src="Assets/arduino_Logo.png" alt="tools" width="200">
-                    <div class="card-content">
-                        <h3>Arduino</h3>
-                        <p></p>
-                        <a href="https://www.arduino.cc/" class="github-link">
-                            <img src="Assets/link_icon.png" alt="Link" class="github-icon">
-                        </a>
-                    </div>
-                </div>
+                <!-- Weitere Tools -->
+                <!-- Du kannst hier die restlichen Cards wie gehabt mit Tools befüllen -->
             </div>
         </section>
 
@@ -383,34 +233,34 @@
             <h2>Projects</h2>
             <div class="card-grid">
                 <div class="card">
-                    <img src="Assets/NovaGate_logo.png" alt="Logo">
+                    <img src="Assets/NovaGate_logo.png" alt="NovaGate">
                     <div class="card-content">
                         <h3>NovaGate</h3>
-                        <p>A Password-Manager App</p>
+                        <p>Password Manager</p>
                         <a href="https://github.com/swyss/NovaGate" class="github-link">
-                            <img src="Assets/github_icon.png" alt="GitHub" class="github-icon">
+                            <img src="Assets/github_icon.png" alt="GitHub" />
                             GitHub Repo
                         </a>
                     </div>
                 </div>
                 <div class="card">
-                    <img src="Assets/sonicflow_logo.png" alt="Logo">
+                    <img src="Assets/sonicflow_logo.png" alt="SonicFlow">
                     <div class="card-content">
                         <h3>SonicFlow</h3>
-                        <p>A Music-App</p>
+                        <p>Music Player App</p>
                         <a href="https://github.com/swyss/SonicFlow" class="github-link">
-                            <img src="Assets/github_icon.png" alt="GitHub" class="github-icon">
+                            <img src="Assets/github_icon.png" alt="GitHub" />
                             GitHub Repo
                         </a>
                     </div>
                 </div>
                 <div class="card">
-                    <img src="Assets/FusionBazaar_logo.png" alt="Logo">
+                    <img src="Assets/FusionBazaar_logo.png" alt="FusionBazaar">
                     <div class="card-content">
                         <h3>FusionBazaar</h3>
-                        <p>WebShop</p>
+                        <p>Online Shop Platform</p>
                         <a href="https://github.com/swyss/FusionBazaar" class="github-link">
-                            <img src="Assets/github_icon.png" alt="GitHub" class="github-icon">
+                            <img src="Assets/github_icon.png" alt="GitHub" />
                             GitHub Repo
                         </a>
                     </div>
@@ -420,20 +270,19 @@
 
         <section id="contact">
             <h2>Contact</h2>
+            <p>Let’s connect on GitHub or LinkedIn!</p>
             <a href="https://github.com/swyss" class="github-link">
-                <img src="Assets/github_icon.png" alt="GitHub" class="github-icon">
+                <img src="Assets/github_icon.png" alt="GitHub" />
                 GitHub
             </a>
-            <!-- <a href="https://www.linkedin.com/in/simon-wyss-3b3b3b1b3/" class="github-link">
-                <img src="Assets/linked_icon.png" alt="LinkedIn" class="github-icon">
-                LinkedIn
-            </a> -->
+            <!-- LinkedIn optional -->
         </section>
     </main>
 
     <footer>
-        <p>© 2024</p>
+        <p>© 2025 Simon Wyss. All rights reserved.</p>
     </footer>
+
 </body>
 
 </html>
